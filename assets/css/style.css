@@ -52,7 +52,7 @@ body {
   line-height: 1.5;
   color: #495057;
   text-align: left;
-  background-color: #fff;
+  background-color: #ff7f51;
 }
 
 
@@ -60,8 +60,6 @@ body {
   max-width: 1200px;
   width: 85%;
   margin: 0 auto;
-
-  /* background: red; */
 }
 
 ul{
@@ -103,7 +101,7 @@ a{
     left: 43%;
     padding: 8px;
     position: absolute;
-    transform: translateY(-100%);
+    transform: translateY(-5000%);
     transition: transform 0.3s;
     color: white;
     border-radius: 0 0 5px 5px;
@@ -118,183 +116,54 @@ a{
        ** NAVBAR **
   ======================*/
 
-  .nav{
-    box-shadow: 0 6px 15px rgba(206, 212, 218, 0.3);
-    min-height: 80px;
-    transition: all 0.3s;
+.nav{
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;  
     background: #fff;
+    margin: 0 auto;
 
     display: flex;
     align-items: center;
-    padding: 10px 0;
-  }
+    padding: 7px 0;
+}
 
 .nav--menubar{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .nav-brand img{
-  max-width: 40px;
-}
-
-.nav--icon{
-  width: 30px;
-  height: 30px;
-  z-index: 2;
-  position: relative;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding: 5px;
-}
-
-.nav--icon span{
-  background-color: var(--primary);
-  width: 30px;
-  height: 3px;
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  transition: all 0.2s ease;
-  right: 0;
-  border-radius: 5px;
-}
-
-.nav--icon span::before,
-.nav--icon span::after{
-  position: absolute;
-  content: "";
+  max-width: 200px;
+  min-width: 100px;
   width: 100%;
-  height: 100%;
-  background-color: var(--primary);
-  border-radius: 5px;
-
-  transform: translateY(10px);
-  transition: all 0.3s 0.2s ease;
 }
 
-.nav--icon span::before{
-  transform: translateY(-10px);
-  transition: all 0.3s 0.1s ease;
-}
 
-.nav--icon span::after{
-  transform: translateY(10px);
-  transition: all 0.3s 0.2s ease;
-}
 
-.nav--icon:hover span::before{
-  width: 25px;
-}
-
-.nav--icon:hover span::after{
-  width: 20px;
-}
-
-.nav--menu{
-  text-align: center;
-  display: none;
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-  transition: opacity 0.5s ease-out, height 0.5s ease-out;
-}
-
-.nav--link{
-  padding-bottom: .7em;
-  font-size: .9rem;
-}
-
-.nav--link:hover{
-  color: var(--primary);
-}
-
-.nav--link:focus{
-  outline: none;
-  text-decoration: underline;
-}
-
-/* ======================
-       ** HEADER **
+  /* ======================
+       ** MAP **
   ======================*/
 
-  .header{
-    height: 80vh;
-    min-height: 500px;
-    padding: 4em 0;
-  }
-
-  .header--subtitle{
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
-  .header--title{
-    font-size: 2.5rem;
-    margin: 0;
-  }
-
-  .header p{
-    margin-top: -10px;
-    font-size: .9rem;
-  }
-
-  .header .btn{
-    margin-top: .3em;
-  }
-
-  .header--image img{
-    max-width: 460px;
-    width: 100%;
-    margin: 2rem 0;
-  }
-
-  .header--socials{
-    margin-top: 1.5em;
-  }
-
-  .header--social{
-    color: var(--primary);
-    border: 2px solid var(--primary);
-    display: inline-block;
-    margin: 0 5px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    transition: all 0.3s;
-    line-height: 40px;
-  }
-
-  .header--social:hover{
-    color: white;
-    background-color: var(--primary);
+  .map{
+    background-color: #ff7f51;
   }
 
   /* ======================
-       ** ABOUT ME **
+       ** MENU **
   ======================*/
 
-  .about-me--image{
-    max-width: 300px;
-    width: 100%;
-    border-radius: 10px;
+  .menu{
+    background-color: #FFF;
+    max-width: 500px;
+    width: 95%;
+
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 10vh;
   }
-  .about-me--text h3{
-    font-weight: bold;
-    margin: 0;
-    color: var(--primary);
-  }
-  .about-me--text h3{
-    font-weight: 300;
-    letter-spacing: 2px;
-    margin-top: -25px;
-    margin-bottom: 1em;
-    color: var(--primary);
-  }
+
 
   /* ======================
        ** FOOTER **
@@ -343,72 +212,11 @@ a{
   }
 
   @media (min-width: 576px) {
-    .header--title{
-      font-size: 3.5rem;
-    }
-  
-    .header p{
-      margin-top: -16px;
-      font-size: 1.3rem;
-    }
-
-    .footer .container{
-      display: flex;
-      align-items: flex-end;
-    }
+   
   }
 
 @media (min-width: 768px) {
-  .nav .container{
-    display: flex;
-    align-items: center;
-  }
 
-  .nav--menubar{
-    margin-right: auto;
-  }
 
- .nav--icon{
-  display: none;
- }
 
- .nav--menu{
-  display: flex;
- }
- 
- .nav--link{
-  padding: 0 0 0 1em;
- }
- 
- .header{
-  min-height: 650px
- }
-
-  .header .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .header--infos{
-    margin-top: 20vh;
-  }
-
-  .header--image img{
-    max-width: 650px;
-    margin: 0;
-  }
-
-  .about-me .container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
-
-  .about-me--text{
-    max-width: 650px;
-    margin-left: 1em;
-  }
-
-  
 }
