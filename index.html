@@ -1,21 +1,22 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
+<html>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Portfolio de Juliana Araujo.">
+    <meta name="description" content="Compilado de museus brasileiros no Google Street.">
     <meta name="author" content="Juliana Araujo">
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <title>Juliana Araújo</title>
-    <!-- font icons -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
 
-<body>
-    <a class="skip-to-content-link" href="#main">
-        Ir para o conteúdo principal
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+  </head>
+  <body>
+    <a class="skip-to-content-link" href="#menu">
+        Ir para o menu
     </a>
 
     <!-- Page navigation -->
@@ -28,71 +29,23 @@
     </nav>
     <!-- End of page navigation -->
 
-    <section class="map">
- 
+    <div id="pano"></div>
+
+    <section class="location-info" id="locationInfo">
+        <h2>Museu Oscar Niemeyer</h2>
+        <span>Curitiba (PR)</span>
     </section>
 
-    <section class="menu">
+    <section class="menu" id="menu">
         <div>
-            <select id="frutas" name="location">    
-                <option value="maca">Museu Oscar Niemeyer</option>
-                <option value="banana">Museu Oscar Niemeyer</option>
-                <option value="laranja">Museu Oscar Niemeyer</option>
-            </select>
-            <label for="frutas">Where are you going?</label>
+            <select id="location" name="location"></select>
+            <label for="location">Where are you going?</label>
         </div>
-        
-
+        <button id="randomLocationButton"><i class="ti-control-shuffle"></i></button>
     </section>
-    <!-- Page Header -->
-    <!-- <header class="header" id="main">
-        <div class="container">
-            <div class="header--infos">
-                <h6 class="header--subtitle">Oi, eu sou a</h6>
-                <h1 class="header--title">Juliana Araújo</h1>
-                <p>Desenvolvedora FrontEnd</p>
 
-                <a class="btn" href="#">Meus Projetos</a>
 
-            </div>
-            <div class="header--image">
-                <img src="assets/imgs/woman.svg" alt="">
-            </div>
-        </div>
-    </header> -->
-    <!-- End of Header -->
-
-    <!-- <section class="about-me" id="about">
-        <div class="container">
-            <img class="about-me--image" src="./assets/imgs/juliana.jpg" alt="">
-            <div class="about-me--text">
-                <h2>Juliana Araújo</h2>
-                <h3>Desenvolvedora FrontEnd | React</h3>
-                <p>Formada em Analise e desenvolvimento de sistemas desde 2020, minha experiencia é voltada para o desenvolvimento Web:  <b>HTML, CSS, Javascript, React JS e Wordpress</b>. </p>
-                <p>Já estive no desenvolvimento de diferentes projetos de desenvolvimento para grandes industrias farmaceuticas, como <b>GSK (Brasil), Libbs, União Quimica e Takeda</b>. Desenvolvendo sites, blogs, email marketing, gestão, Veeva Vault, Salesforce, entre outras. Utilizando metodologias ágeis, Javascript, HTML, CSS, PHP, Wordpress, tecnicas de SEO, Google Analytics.</p>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- <footer class="footer ">
-     <div class="container">
-        <div class="footer--column">
-            <img src="assets/imgs/logo-white.svg" class="footer--brand" alt="">
-            <p><a href="mailto:julianaraujo555@gmail.com">julianaraujo555@gmail.com</a><i class="ti-arrow-top-right"></i></p>
-        </div>
-        <div class="footer--column">
-            <p><a href="https://www.linkedin.com/in/juliana-araujo-2535a01a4/">LinkedIn</a><i class="ti-arrow-top-right"></i></p>     
-            <p><a href="https://github.com/julianaraujo333">Github</a><i class="ti-arrow-top-right"></i></p> 
-        </div>
-     </div>
-    </footer> -->
-
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initialize&v=weekly"
-    defer
-  ></script>
-
-    <script src="assets/js/script.js" type="module"></script>
-</body>
-
+    <script type="module" src="./assets/js/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+  </body>
 </html>

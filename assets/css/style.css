@@ -13,7 +13,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #c05c7e;
+  --primary: #03620b;
   --secondary: #6c757d;
   --success: #A3C14A;
   --info: #47D8E0;
@@ -37,7 +37,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -46,13 +46,13 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
   text-align: left;
-  background-color: #ff7f51;
+  position: relative;
 }
 
 
@@ -72,25 +72,7 @@ a{
   color: var(--gray);
 }
 
-.btn{
-  display: inline-block;
-  background-color: var(--primary);
-  color: white;
-  padding: .5em 1.7em;
-  border-radius: 10px;
-  outline: 3px solid var(--primary);
-  transition: all ease-in-out 300ms;
-}
 
-.btn:hover{
-  outline: 3px solid #b04568;
-  background-color: #b04568;
-}
-
-.btn:focus{
-  outline: 3px solid white;
-  outline-offset: -4px;
-}
 
 /* ======================
        ** SKIP CONTENT **
@@ -111,7 +93,6 @@ a{
     transform: translateY(0%);
   }
 
-
 /* ======================
        ** NAVBAR **
   ======================*/
@@ -124,6 +105,7 @@ a{
     display: flex;
     align-items: center;
     padding: 7px 0;
+    height: 72px;
 }
 
 .nav--menubar{
@@ -135,17 +117,45 @@ a{
 .nav-brand img{
   max-width: 200px;
   min-width: 100px;
+  max-height: 50px;
   width: 100%;
 }
 
-
-
-  /* ======================
-       ** MAP **
+ /* ======================
+       ** location info **
   ======================*/
 
-  .map{
-    background-color: #ff7f51;
+  .location-info{
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 350px;
+    
+    position: fixed;
+    right: 0;
+    top: 20vh;
+
+    box-sizing: border-box;
+    padding: 1.5em;
+    border-radius: 15px  0 0 15px;
+
+
+    color: #03620b;
+    text-align: right;
+    z-index: 9;
+  }
+
+  .location-info h2{
+    margin: 0;
+  }
+
+  /* ======================
+       ** PANORAMICA **
+  ======================*/
+
+  #pano{
+    background: var(--primary);
+    height: calc(100% - 72px);
+    float: left;
+    width: 100%;
   }
 
   /* ======================
@@ -156,60 +166,72 @@ a{
     background-color: #FFF;
     max-width: 500px;
     width: 95%;
+    max-height: 90px;
 
     position: fixed;
     margin: 0 auto;
     left: 0;
     right: 0;
     bottom: 10vh;
+
+    padding: 1.5em 2em;
+    border-radius: 15px;
+    z-index: 9;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-
-  /* ======================
-       ** FOOTER **
-  ======================*/
-
-  .footer{
-    background-color: var(--primary);
-    padding: 5em 0 2em 0;
-  }
-
-  .footer a{
-    text-decoration: underline;
-    color: white;
-    font-size: .9rem;
-  }
-
-  .footer i{
-    color: white;
-    font-size: .7rem;
-    transition: all ease-in-out 300ms;
-  }
-
-  .footer p{
-    margin-bottom: .4em;
-  }
-
-  .footer p:hover i,
-  .footer p:focus i{
-    outline: none;
-    color: #495057;
-  }
-
-  .footer .container div:nth-child(1){
-    margin-right: 5em;
-  }
-
-  .footer--column{
+  .menu > div{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  .footer--brand{
-    max-width: 70px;
-    margin-bottom: 1em;
-
+  .menu label{
+    font-family: "Open Sans", sans-serif;
+    font-size: .8rem;
+    margin-left: 4px;
   }
+
+  .menu select{
+    font-family: "Open Sans", sans-serif;
+    background-color: #fff;
+    font-size: 1.1rem;
+    border: 0;
+  }
+
+  .menu button{
+    border: 0;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+    background:rgba(3,98,11, 0.6);
+    color: #fff;
+    font-size: 1.4rem;
+
+    transition: all 0.3s ease; 
+    outline: 3px solid rgba(3,98,11, 0.6);
+  }
+
+  .menu button:hover{
+    outline: 3px solid rgba(3,98,11, 0.6);
+    transform: scale(1.1);
+  }
+
+  .menu button:focus{
+    outline: 3px solid white;
+    outline-offset: -4px;
+  }
+
+  @media (min-width: 768px) {
+    .menu{
+      bottom: 40px;
+    }
+  }
+
 
   @media (min-width: 576px) {
    
@@ -217,6 +239,5 @@ a{
 
 @media (min-width: 768px) {
 
-
-
 }
+
